@@ -1,0 +1,27 @@
+{
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"env": {
+		"browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+	},
+	"globals": {},
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "comma-dangle": "off",
+  	"eol-last": "off",
+  	"react/jsx-filename-extension": "off",
+    "func-names": "off"
+  },
+  "extends": "airbnb"
+}

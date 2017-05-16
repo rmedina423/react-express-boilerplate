@@ -18,6 +18,7 @@
     "import"
   ],
   "rules": {
+    "arrow-body-style": "off",
     "comma-dangle": "off",
   	"eol-last": "off",
   	"react/jsx-filename-extension": "off",

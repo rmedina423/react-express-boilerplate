@@ -1,16 +1,16 @@
 {
   "name": "react-express-boilerplate",
   "version": "1.0.0",
-  "description": "this is an attempt to play around with react & jest",
+  "description": "this is a boilerplate project to get you started using react & express",
   "main": "index.js",
   "author": "Ryan M. Medina",
   "license": "MIT",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint ./",
+    "lint": "eslint ./",
     "start": "nodemon ./server/runServer.js",
     "test": "NODE_ENV=test yarn test:client && yarn test:server && yarn lint",
-    "test:client": "./node_modules/jest/bin/jest.js -c ./client/tests/jest.client.config.json",
-    "test:server": "NODE_ENV=test ./node_modules/jest/bin/jest.js -c ./server/tests/jest.server.config.json"
+    "test:client": "jest -c ./client/tests/jest.client.config.json",
+    "test:server": "NODE_ENV=test jest -c ./server/tests/jest.server.config.json"
   },
   "dependencies": {
     "express": "^4.15.2",

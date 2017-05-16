@@ -9,7 +9,7 @@ const compiler = webpack(webpackConfig);
 const indexHTML = require('./views/index.html');
 
 module.exports = {
-  getApp: (app = express()) => {
+  getApp: (app) => {
     if (process.env.NODE_ENV !== 'test') {
       app.use(webpackDevMiddleware(compiler, {
         publicPath: webpackConfig.output.publicPath

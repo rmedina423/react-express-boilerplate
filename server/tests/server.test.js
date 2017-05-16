@@ -8,14 +8,10 @@ describe('server', function () {
     this.app = server.getApp(express());
   });
 
-  test('/ route should give 200 and return the index html', (done) => {
-    request(this.app)
+  test('/ route should give 200 and return the index html', () => {
+    return request(this.app)
       .get('/')
-      .expect(200, indexHTML())
-      .end((err) => {
-        if (err) throw err;
-        done();
-      });
+      .expect(200, indexHTML());
   });
 
   test('should call listen with the passed port when starting the server', () => {

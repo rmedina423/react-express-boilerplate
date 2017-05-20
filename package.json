@@ -9,8 +9,9 @@
     "lint": "eslint ./",
     "start": "nodemon ./server/runServer.js",
     "test": "NODE_ENV=test yarn test:client && yarn test:server && yarn lint",
-    "test:client": "jest -c ./client/tests/jest.client.config.json",
-    "test:server": "NODE_ENV=test jest -c ./server/tests/jest.server.config.json"
+    "test:coverage": "NODE_ENV=test yarn test:client -- --coverage && yarn test:server -- --coverage",
+    "test:client": "jest -c ./client/jest.client.config.json",
+    "test:server": "NODE_ENV=test jest -c ./server/jest.server.config.json"
   },
   "dependencies": {
     "express": "^4.15.2",

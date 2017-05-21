@@ -2,7 +2,7 @@
   "collectCoverageFrom" : [
     "server/**/*.js"
   ],
-  "coverageDirectory": "../../coverage/server",
+  "coverageDirectory": "../coverage/server",
   "coveragePathIgnorePatterns": [
     "/server/runServer.js"
   ],

@@ -2,7 +2,7 @@
   "collectCoverageFrom" : [
     "client/javascripts/**/*.js"
   ],
-  "coverageDirectory": "../../coverage/client",
+  "coverageDirectory": "../coverage/client",
   "coveragePathIgnorePatterns": [
     "/client/javascripts/index.js"
   ],

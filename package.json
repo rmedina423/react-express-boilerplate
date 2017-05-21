@@ -6,12 +6,14 @@
   "author": "Ryan M. Medina",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ./",
     "start": "nodemon ./server/runServer.js",
+    "lint": "eslint ./",
     "test": "NODE_ENV=test yarn test:client && yarn test:server && yarn lint",
     "test:coverage": "NODE_ENV=test yarn test:client -- --coverage && yarn test:server -- --coverage",
     "test:client": "jest -c ./client/jest.client.config.json",
-    "test:server": "NODE_ENV=test jest -c ./server/jest.server.config.json"
+    "test:server": "NODE_ENV=test jest -c ./server/jest.server.config.json",
+    "presendCoverage": "lcov-result-merger './coverage/**/lcov.info' ./coverage/lcov.info",
+    "sendCoverage": "echo 'you need to set up code coverage integration with your tool of choice!'"
   },
   "dependencies": {
     "express": "^4.15.2",
@@ -38,6 +40,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "jest": "^20.0.1",
     "jest-enzyme": "^3.1.1",
+    "lcov-result-merger": "^1.2.0",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
     "react-test-renderer": "^15.5.4",

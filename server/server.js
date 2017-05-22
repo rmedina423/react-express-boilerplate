@@ -3,7 +3,7 @@ const winston = require('winston');
 
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
-const webpackConfig = require('../webpack.config');
+const webpackConfig = require('../webpack.dev.config');
 
 const compiler = webpack(webpackConfig);
 const indexHTML = require('./views/index.html');

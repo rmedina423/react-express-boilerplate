@@ -13,7 +13,12 @@
     "test:client": "jest -c ./client/jest.client.config.json",
     "test:server": "NODE_ENV=test jest -c ./server/jest.server.config.json",
     "presendCoverage": "lcov-result-merger './coverage/**/lcov.info' ./coverage/lcov.info",
-    "sendCoverage": "echo 'you need to set up code coverage integration with your tool of choice!'"
+    "sendCoverage": "echo 'you need to set up code coverage integration with your tool of choice!'",
+    "webpack:analyzer": "webpack --config webpack.dev.config.js --profile --json > stats.json && webpack-bundle-analyzer stats.json",
+    "webpack": "NODE_ENV='production' webpack --config webpack.prod.config.js",
+    "server": "NODE_ENV='production' node server/runServer",
+    "prod": "NODE_ENV='production' yarn webpack && yarn server",
+    "dev": "nodemon ./server/runServer.js"
   },
   "dependencies": {
     "express": "^4.15.2",

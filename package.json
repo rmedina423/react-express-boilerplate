@@ -51,6 +51,7 @@
     "react-test-renderer": "^15.5.4",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "webpack-bundle-analyzer": "^2.8.2"
   }
 }

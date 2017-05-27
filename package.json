@@ -17,8 +17,8 @@
     "webpack:analyzer": "webpack --config webpack.prod.config.js --profile --json > stats.json && webpack-bundle-analyzer stats.json",
     "webpack": "webpack --config webpack.prod.config.js",
     "server": "NODE_ENV='production' node server/runServer",
-    "prod": "NODE_ENV='production' yarn webpack && yarn server",
-    "dev": "nodemon ./server/runServer.js"
+    "prod": "yarn webpack && yarn server",
+    "dev": "NODE_ENV='development' nodemon ./server/runServer.js"
   },
   "dependencies": {
     "express": "^4.15.2",

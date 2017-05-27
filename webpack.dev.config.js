@@ -2,7 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: ['./client/javascripts/index.js', './client/stylesheets/styles.scss'],
+  entry: './client/javascripts/index.js',
   devtool: 'eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
@@ -27,6 +27,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development'
+    }),
     new ExtractTextPlugin('styles.css')
   ]
 };

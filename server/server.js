@@ -1,5 +1,6 @@
 const express = require('express');
 const winston = require('winston');
+const compression = require('compression');
 
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpack = require('webpack');
@@ -15,12 +16,10 @@ module.exports = {
         publicPath: webpackConfig.output.publicPath
       }));
     }
-
+    app.use(compression());
     app.use(express.static('public'));
 
-    app.get('/', (req, res) => {
-      res.send(indexHTML({ greeting: 'World' }));
-    });
+    app.get('/', (req, res) => res.send(indexHTML({ greeting: 'World' })));
 
     return app;
   },

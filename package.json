@@ -21,6 +21,7 @@
     "dev": "NODE_ENV='development' nodemon ./server/runServer.js"
   },
   "dependencies": {
+    "compression": "^1.6.2",
     "express": "^4.15.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "prop-types": "^15.5.10",

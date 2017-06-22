@@ -9,7 +9,7 @@ module.exports = () => `
     <link href="/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="container"></div>
+    <div id="app-container"></div>
     <script type="text/javascript" src="/bundle.js" charset="utf-8"></script>
   </body>
   </html>

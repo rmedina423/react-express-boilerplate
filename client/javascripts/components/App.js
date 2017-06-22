@@ -8,16 +8,12 @@ export default function App(props) {
   return (
     <div>
       <Header />
-      <h1>Hello {props.name}</h1>
+      {props.children}
       <Footer />
     </div>
   );
 }
 
 App.propTypes = {
-  name: PropTypes.string
-};
-
-App.defaultProps = {
-  name: 'Joey'
+  children: PropTypes.node.isRequired
 };

@@ -5,10 +5,10 @@ import Header from '../../javascripts/components/Header';
 
 describe('Header Component', function () {
   beforeEach(() => {
-    this.header = shallow(<Header name="myHeaderWorks" />);
+    this.header = shallow(<Header />);
   });
 
   test('renders Header', () => {
-    expect(this.header.instance().props.name).toBe('myHeaderWorks');
+    expect(this.header.text()).toBe('Header');
   });
 });

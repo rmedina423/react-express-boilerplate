@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header() {
   return (
     <header>
-      <h1>Ryan Medina</h1>
+      <h1>Header</h1>
     </header>
   );
 }

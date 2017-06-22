@@ -5,10 +5,10 @@ import Footer from '../../javascripts/components/Footer';
 
 describe('Footer Component', function () {
   beforeEach(() => {
-    this.footer = shallow(<Footer name="myFooterWorks" />);
+    this.footer = shallow(<Footer />);
   });
 
   test('renders Footer', () => {
-    expect(this.footer.instance().props.name).toBe('myFooterWorks');
+    expect(this.footer.text()).toBe('Footer');
   });
 });

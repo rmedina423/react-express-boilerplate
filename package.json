@@ -6,7 +6,6 @@
   "author": "Ryan M. Medina",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./server/runServer.js",
     "lint": "eslint ./",
     "test": "NODE_ENV=test yarn test:client && yarn test:server && yarn lint",
     "test:coverage": "NODE_ENV=test yarn test:client -- --coverage && yarn test:server -- --coverage",

@@ -11,7 +11,7 @@ const indexHTML = require('./views/index.html');
 
 module.exports = {
   getApp: (app) => {
-    if (process.env.NODE_ENV !== 'test') {
+    if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') {
       app.use(webpackDevMiddleware(compiler, {
         publicPath: webpackConfig.output.publicPath
       }));
